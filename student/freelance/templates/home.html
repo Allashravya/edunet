@@ -1,85 +1,249 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentFreelance</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons/logos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <a link="" 
+    <title>EduNet Freelance</title>
     <style>
-        /* Custom styles for perfection */
-        body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
-        .navbar { background-color: #007bff; }
-        .hero { background: linear-gradient(to right, #007bff, #28a745); color: white; padding: 50px 0; text-align: center; }
-        .job-block { border: 1px solid #ddd; padding: 20px; margin: 10px 0; border-radius: 8px; background: white; }
-        .job-category { text-align: center; margin: 20px; }
-        .job-category img { width: 50px; height: 50px; }
-        .search-bar { flex: 1; margin: 0 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .app-name {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .search-container {
+            flex: 1;
+            margin: 0 2rem;
+        }
+
+        .search-container input {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+
+        /* Job Types Section */
+        .job-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .job-type-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .job-type-card h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .job-type-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Available Jobs Section */
+        .available-jobs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+
+        .job-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .job-info {
+            color: #666;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .job-info strong {
+            color: #2c3e50;
+        }
+
+        .salary {
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .apply-btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .apply-btn:hover {
+            background-color: #229954;
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">StudentFreelance</a>  <!-- App name on left -->
-            <div class="search-bar">
-                <input type="text" class="form-control" placeholder="Search jobs..." id="searchInput">
-            </div>
-            <button class="btn btn-outline-light" type="button">Login</button>  <!-- Login on right -->
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="app-name">🎓 EduNet Freelance</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search jobs, skills...">
         </div>
+        <button class="login-btn">Login</button>
     </nav>
 
-    <!-- Hero/Banner Section (Basic Information) -->
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to StudentFreelance</h1>
-            <p>Find freelance gigs tailored for students. Earn while learning!</p>
-        </div>
-    </section>
-
-    <!-- Job Listings (Blocks with Jobs and Salaries) -->
-    <div class="container my-5">
-        <h2>Available Jobs</h2>
-        <div id="jobList">
-            {% for job in jobs %}
-            <div class="job-block">
-                <h4>{{ job.title }}</h4>
-                <p>{{ job.description }}</p>
-                <p><strong>Salary: ${{ job.salary }}</strong></p>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Job Types Section -->
+        <h2 class="section-title">Job Categories</h2>
+        <div class="job-types">
+            <div class="job-type-card">
+                <h3>🎨 UX Design</h3>
+                <p>Create beautiful user experiences and interfaces. Work on mobile apps, web platforms, and digital products.</p>
             </div>
-            {% endfor %}
+            <div class="job-type-card">
+                <h3>💻 Web Development</h3>
+                <p>Build responsive websites and web applications. Work with modern technologies and frameworks.</p>
+            </div>
+            <div class="job-type-card">
+                <h3>📱 Mobile Development</h3>
+                <p>Develop iOS and Android applications. Create engaging mobile experiences for millions of users.</p>
+            </div>
+            <div class="job-type-card">
+                <h3>✍️ Content Writing</h3>
+                <p>Write compelling content for blogs, websites, and marketing materials. Showcase your writing skills.</p>
+            </div>
+        </div>
+
+        <!-- Available Jobs Section -->
+        <h2 class="section-title">Available Jobs</h2>
+        <div class="available-jobs">
+            <div class="job-card">
+                <h4>E-commerce Website Design</h4>
+                <div class="job-info"><strong>Role:</strong> UX/UI Designer</div>
+                <div class="job-info"><strong>Type:</strong> Freelance</div>
+                <div class="salary">$800 - $1200</div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h4>Django Backend API</h4>
+                <div class="job-info"><strong>Role:</strong> Backend Developer</div>
+                <div class="job-info"><strong>Type:</strong> Project Based</div>
+                <div class="salary">$1500 - $2500</div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h4>React Dashboard Development</h4>
+                <div class="job-info"><strong>Role:</strong> Frontend Developer</div>
+                <div class="job-info"><strong>Type:</strong> Freelance</div>
+                <div class="salary">$1000 - $1800</div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h4>Mobile App UI Design</h4>
+                <div class="job-info"><strong>Role:</strong> UI Designer</div>
+                <div class="job-info"><strong>Type:</strong> Project Based</div>
+                <div class="salary">$600 - $1000</div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h4>Blog Writing & SEO</h4>
+                <div class="job-info"><strong>Role:</strong> Content Writer</div>
+                <div class="job-info"><strong>Type:</strong> Hourly</div>
+                <div class="salary">$15 - $30/hour</div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h4>Android App Development</h4>
+                <div class="job-info"><strong>Role:</strong> Mobile Developer</div>
+                <div class="job-info"><strong>Type:</strong> Project Based</div>
+                <div class="salary">$2000 - $3500</div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
         </div>
     </div>
-
-    <!-- Job Types with Logos -->
-    <div class="container my-5">
-        <h2>Job Categories</h2>
-        <div class="row">
-            {% for category in categories %}
-            <div class="col-md-3 job-category">
-                <img src="{{ category.logo_url }}" alt="{{ category.name }} Logo" onerror="this.src='https://via.placeholder.com/50';">  <!-- Fallback to placeholder -->
-                <p>{{ category.name }}</p>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Bootstrap JS and Custom JS for Search -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Simple client-side search (filters job blocks)
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const jobs = document.querySelectorAll('.job-block');
-            jobs.forEach(job => {
-                const title = job.querySelector('h4').textContent.toLowerCase();
-                job.style.display = title.includes(query) ? 'block' : 'none';
-            });
-        });
-    </script>
 </body>
 </html>
- 

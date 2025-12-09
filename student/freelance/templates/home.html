@@ -46,7 +46,7 @@
             font-size: 1rem;
         }
 
-        .login-btn {
+        .dashboard-btn {
             background-color: #3498db;
             color: white;
             padding: 0.75rem 1.5rem;
@@ -57,7 +57,7 @@
             transition: background-color 0.3s;
         }
 
-        .login-btn:hover {
+        .dashboard-btn:hover {
             background-color: #2980b9;
         }
 
@@ -163,11 +163,11 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="app-name">🎓 EduNet Freelance</div>
+        <div class="app-name">🎓Freelance</div>
         <div class="search-container">
             <input type="text" placeholder="Search jobs, skills...">
         </div>
-        <button class="login-btn">Login</button>
+        <a href="{% url 'dashboard' %}"><button type="dashboard">dashboard</button></a>
     </nav>
 
     <!-- Main Content -->
@@ -201,7 +201,7 @@
                 <div class="job-info"><strong>Role:</strong> UX/UI Designer</div>
                 <div class="job-info"><strong>Type:</strong> Freelance</div>
                 <div class="salary">$800 - $1200</div>
-                <button class="apply-btn">Apply Now</button>
+                <a href="{% url 'application' %}"><button class="apply-btn">Apply Now</button></a>
             </div>
 
             <div class="job-card">
@@ -209,7 +209,7 @@
                 <div class="job-info"><strong>Role:</strong> Backend Developer</div>
                 <div class="job-info"><strong>Type:</strong> Project Based</div>
                 <div class="salary">$1500 - $2500</div>
-                <button class="apply-btn">Apply Now</button>
+                <a href="{% url 'application' %}"><button class="apply-btn">Apply Now</button></a>
             </div>
 
             <div class="job-card">
@@ -217,7 +217,7 @@
                 <div class="job-info"><strong>Role:</strong> Frontend Developer</div>
                 <div class="job-info"><strong>Type:</strong> Freelance</div>
                 <div class="salary">$1000 - $1800</div>
-                <button class="apply-btn">Apply Now</button>
+                <a href="{% url 'application' %}"><button class="apply-btn">Apply Now</button></a>
             </div>
 
             <div class="job-card">
@@ -225,7 +225,7 @@
                 <div class="job-info"><strong>Role:</strong> UI Designer</div>
                 <div class="job-info"><strong>Type:</strong> Project Based</div>
                 <div class="salary">$600 - $1000</div>
-                <button class="apply-btn">Apply Now</button>
+                <a href="{% url 'application' %}"><button class="apply-btn">Apply Now</button></a>
             </div>
 
             <div class="job-card">
@@ -233,7 +233,7 @@
                 <div class="job-info"><strong>Role:</strong> Content Writer</div>
                 <div class="job-info"><strong>Type:</strong> Hourly</div>
                 <div class="salary">$15 - $30/hour</div>
-                <button class="apply-btn">Apply Now</button>
+                <a href="{% url 'application' %}"><button class="apply-btn">Apply Now</button></a>
             </div>
 
             <div class="job-card">
@@ -241,10 +241,9 @@
                 <div class="job-info"><strong>Role:</strong> Mobile Developer</div>
                 <div class="job-info"><strong>Type:</strong> Project Based</div>
                 <div class="salary">$2000 - $3500</div>
-                <button class="apply-btn">Apply Now</button>
+                <a href="{% url 'application' %}"><button class="apply-btn">Apply Now</button></a>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

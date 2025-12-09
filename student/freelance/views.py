@@ -37,3 +37,18 @@ def login_view(request):
 
 def freelance(request):
     return render(request, 'home.html')
+def dashboard(request):
+    return render(request, 'dashboard.html')
+def profile(request):
+    return render(request, 'profile.html')
+def courses(request):
+    return render(request, 'courses.html')
+def skills(request):
+    return render(request, 'skills.html')
+def logout(request):
+    return render(request, 'logout.html')
+def dashboard_view(request):
+    return render(request, 'dashboard.html')
+    return redirect('home.html') 
+def application_view(request):
+    return render(request, 'application.html') 

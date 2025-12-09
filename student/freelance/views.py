@@ -25,7 +25,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('freelanceapp')  # Redirect to app page after login
+                return redirect('freelance')  # Redirect to app page after login
             else:
                 messages.error(request, 'Invalid username or password.')
         else:
@@ -35,5 +35,5 @@ def login_view(request):
         form = AuthenticationForm()
         return render(request, "login.html", {'form': form})
 
-def freelanceapp(request):
+def freelance(request):
     return render(request, 'home.html')

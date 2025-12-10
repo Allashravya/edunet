@@ -57,6 +57,9 @@
     </style>
 </head>
 <body>
+    {% for u in login %}
+     {{u.password}} {{u.username}}
+    {% endfor %}
     <div class="container">
         <h2>Login</h2>
         {% if messages %}
